@@ -69,3 +69,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 sudo tmutil addexclusion $HOME/Dropbox
 sudo tmutil addexclusion $HOME/Downloads
 sudo tmutil addexclusion $HOME/Desktop
+
+# restart things
+killall finder
+killall dock
