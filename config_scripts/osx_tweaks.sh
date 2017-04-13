@@ -8,10 +8,11 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Create a symlink in the home dir for access to icloud from the command line
-ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ~/iCloud
+if [ ! -L ~/iCloud ] ; then
+  ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/ ~/iCloud
+fi
 
 # A bunch of these came from https://gist.github.com/pongstr/5640267
-
 
 # Use scroll gesture with the Ctrl (^) modifier key to zoom
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true

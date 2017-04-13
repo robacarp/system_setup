@@ -6,6 +6,7 @@ brew install ant
 brew install autoconf
 brew install automake
 brew install axel
+brew install awscli
 brew install cmake
 brew install coreutils
 brew install homebrew/versions/elasticsearch24
@@ -16,6 +17,7 @@ brew install kibana
 brew install memcached
 brew install mosh
 brew install nmap
+brew install nodejs
 brew install postgresql
 brew install rbenv
 brew install redis

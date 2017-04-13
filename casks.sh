@@ -11,6 +11,7 @@ brew cask install dash
 brew cask install flux
 brew cask install google-chrome
 brew cask install github-desktop
+brew cask install gpgtools
 brew cask install hammerspoon
 brew cask install istat-menus
 brew cask install iterm2
@@ -20,6 +21,7 @@ brew cask install knock
 brew cask install launchrocket
 brew cask install macvim
 brew cask install ngrok
+brew cask install omnifocus
 brew cask install paw
 brew cask install postico
 brew cask install screenhero

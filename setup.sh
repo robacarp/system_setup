@@ -41,8 +41,8 @@ if [ ! -d ~/.dotfiles ] ; then
   ~/.dotfiles/install.pl > /dev/null
 fi
 
-# source casks.sh
-# source brews.sh
+source casks.sh
+source brews.sh
 source configs.sh
 
 # Check to make sure fish shell is in etc/shells
