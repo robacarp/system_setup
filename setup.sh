@@ -8,23 +8,16 @@ function note {
 
 echo > $notes_file
 
-if [ ! -f ~/.ssh/id_rsa ] && [ ! -f ~/.ssh/id_ecdsa ] ; then
-  echo "
-It doesnt look like you have your private key setup.
-
-Create a private key and make sure it's updated with github.
-"
-  exit 1
-fi
-
-
-
 # Install homebrew
 which brew > /dev/null
 if [ $? -ne 0 ] ; then
   echo Installing Homebrew...
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+source casks.sh
+source brews.sh
+source configs.sh
 
 # setup git
 ssh-keygen -F 'github.com' | grep 'github.com' > /dev/null 2> /dev/null
@@ -33,6 +26,15 @@ ssh-keygen -F 'github.com' | grep 'github.com' > /dev/null 2> /dev/null
 if [ $? -ne 0 ] ; then
   echo prefetching public keys from github...
   ssh-keyscan github.com >> ~/.ssh/known_hosts
+fi
+
+if [ ! -f ~/.ssh/id_rsa ] && [ ! -f ~/.ssh/id_ecdsa ] ; then
+  echo "
+It doesnt look like you have your private key setup.
+
+Create a private key and make sure it's updated with github.
+"
+  exit 1
 fi
 
 # install dotfiles repo

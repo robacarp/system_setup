@@ -5,25 +5,34 @@ brew install ansible
 brew install ant
 brew install autoconf
 brew install automake
+brew install awscli
 brew install axel
 brew install awscli
 brew install cmake
 brew install coreutils
-brew install homebrew/versions/elasticsearch24
+brew install elasticsearch24
 brew install exiftool
 brew install fish
 brew install git
+brew install glib
+brew install gmp
+brew install gnutls
+brew install heroku
+brew install homebrew/versions/elasticsearch24
+brew install irssi
 brew install kibana
 brew install memcached
 brew install mosh
+brew install mtr
 brew install nmap
 brew install nodejs
 brew install postgresql
 brew install rbenv
 brew install redis
+brew install ruby-build
 brew install sqlite
 brew install the_silver_searcher
 brew install watch
+brew install weechat
 brew install wget
-
-
+brew install xz
